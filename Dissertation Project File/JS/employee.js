@@ -31,7 +31,7 @@
                 
             },
                    
-                //sort the data from greatest to smallest
+                //sort the data 
               function(data) {      
                    
                     data.sort(function(d) {
