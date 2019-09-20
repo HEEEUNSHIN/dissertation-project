@@ -1,0 +1,273 @@
+
+body * {
+    letter-spacing: initial;
+}
+
+p, li, a, table, figcaption, .axisLabel {
+    font-family: 'Times', serif;
+}
+
+/*Tooltip for charts*/
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    min-width: 60px;
+    min-height: 40px;
+    padding: 2px;
+    font: 16px sans-serif;
+    background: white;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+
+.focus circle {
+    z-index: 1;
+}
+
+
+/* Paragraph style */
+
+.interlude {
+    padding: 1.5em 0;
+    line-height: 2.5em;
+}
+
+p.source {
+    font-size: .7em;
+    text-align: right;
+    color: #8e8e8e;
+}
+
+
+
+#layout, #menu, .menu-link {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+
+
+#layout {
+    position: relative;
+    left: 0;
+    padding-left: 0;
+}
+
+#layout.active #menu {
+    left: 150px;
+    width: 200px;
+}
+
+#layout.active .menu-link {
+    left: 170px;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 0 2em;
+    max-width: 800px;
+    margin-bottom: 50px;
+    line-height: 1.6em;
+}
+
+.header {
+    margin: 0;
+    color: black;
+    text-align: center;
+    padding: 2.5em 0;
+}
+
+.header h1 {
+    margin: 0.2em 0;
+    font-size: 3em;
+    font-weight: 400;
+}
+
+.header h2 {
+    font-weight: 300;
+    color: black;
+    padding: 0;
+    margin-top: 0;
+}
+
+.content-subhead {
+    margin: 50px 0 20px 0;
+    font-weight: 300;
+    color: black;
+}
+
+
+
+#menu {
+    margin-left: -150px;
+    font-size: 22px;
+    width: 260px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: grey;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+#menu a {
+    color: whitesmoke;
+    border: none;
+    padding: 0.6em 0 0.6em 0.6em;
+}
+
+#menu .pure-menu, #menu .pure-menu ul {
+    border: none;
+}
+
+#menu .pure-menu li a:hover, #menu .pure-menu li a:focus {
+    background: black;
+}
+
+
+#menu .pure-menu-heading {
+    background: darkblue;
+    font-size: 110%;
+    color: white;
+    margin: 0;
+}
+
+
+.menu-link {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    background: #000;
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 10px;
+    z-index: 10;
+    width: 2em;
+    height: auto;
+    padding: 2.1em 1.6em;
+}
+
+.menu-link:hover, .menu-link:focus {
+    background: #000;
+}
+
+.menu-link span {
+    position: relative;
+    display: block;
+}
+
+.menu-link span, .menu-link span:before, .menu-link span:after {
+    background-color: #fff;
+    width: 100%;
+    height: 0.2em;
+}
+
+.menu-link span:before, .menu-link span:after {
+    position: absolute;
+    margin-top: -0.6em;
+    content: " ";
+}
+
+.menu-link span:after {
+    margin-top: 0.6em;
+}
+
+
+svg {
+    letter-spacing: initial;
+}
+
+h3.plotTitle {
+    margin-bottom: .3em;
+}
+
+p.subtitle {
+    font-size: .9em;
+    line-height: initial;
+    padding-top: 0;
+    font-style: italic;
+    margin-top: 0;
+}
+
+.axis text {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.axisLabel {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: .8em;
+    padding-top: .1em;
+}
+
+#us_Chart, #us_Text, #cs_Chart, #cs_Text, #ts_Chart, #ts_Chart2, #ts_Text, #ts_Text2, #as_Chart, #as_Text {
+    display: none;
+    align-content: center;
+}
+
+.spine {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 2em;
+    border-top: 2px #777879 solid;
+    border-bottom: 2px #777879 solid;
+    line-height: 1.5em;
+    font-size: .95em;
+    text-align: center;
+}
+
+.buttonspine {
+    display: flex;
+    background-color: #053961;
+    border: none;
+    color: white;
+    text-align: center;
+    width: 10em;
+    height: 5em;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.buttonspine:hover{
+
+    background-color: #428ff4;
+}
+
+
+a.sublink {
+    white-space: normal;
+    padding-right: .1em;
+}
+
+/* for media adjustment */
+
+@media (min-width: 48em) {
+    .header, .content {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    #layout {
+        padding-left: 150px;
+        left: 0;
+    }
+    #menu {
+        left: 150px;
+    }
+    .menu-link {
+        position: fixed;
+        left: 150px;
+        display: none;
+    }
+    #layout.active .menu-link {
+        left: 150px;
+    }
+}
